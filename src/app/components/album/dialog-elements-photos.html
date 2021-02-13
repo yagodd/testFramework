@@ -1,0 +1,23 @@
+
+<h2 mat-dialog-title>Album: {{data.title}}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let photosAlbum of photosAlbum" 
+        class="album"
+        [colspan]="1"
+        [rowspan]="2"
+        [style.backgroundImage]="'url('+ photosAlbum.thumbnailUrl +')'">
+        <a (click)="openDialogPhoto(photosAlbum.url)">
+            <div class="albumHover">
+                <section class="mat-typography">
+                  <h3 class="mat-subheading-2">{{photosAlbum.title}}</h3>
+                </section>
+            </div>
+        </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+</div>

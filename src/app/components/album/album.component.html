@@ -1,0 +1,17 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let album of albums" 
+        class="album"
+        [colspan]="1"
+        [rowspan]="2"
+        [style.backgroundImage]="'url('+ album.thumbnailUrl +')'">
+        <a (click)="openDialog(album.id, album.title)">
+            <div class="albumHover">
+                <section class="mat-typography">
+                    <span class="mat-title" [matBadge]="album.id" matBadgeOverlap="false">{{album.name}}</span>
+                    <h3 class="mat-subheading-2">{{album.title}}</h3>
+                </section>
+            </div>
+        </a>
+    </mat-grid-tile>
+</mat-grid-list>

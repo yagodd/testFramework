@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Tarefas</mat-card-title>
+    <mat-card-subtitle class="cardSubtitle">
+        Tarefas em azul completas, em vermelho incompletas
+    </mat-card-subtitle>
+    <mat-chip-list
+    class="chip"
+    cdkDropList 
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="drop($event)">
+    
+    <div *ngFor="let todos of todos">
+        <mat-chip
+            *ngIf="todos.completed == false"
+            class="box"
+            color="warn"
+            selected>
+            {{ todos.title }}
+        </mat-chip>
+        <mat-chip
+            *ngIf="todos.completed == true"
+            class="box"
+            color="primary"
+            selected>
+            {{ todos.title }}
+        </mat-chip>
+    </div>
+    </mat-chip-list>
+</mat-card>

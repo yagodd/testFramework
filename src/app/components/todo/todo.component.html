@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title>Usuários</mat-card-title>
+    <mat-chip-list
+    class="chip"
+    cdkDropList 
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="drop($event)">
+    <mat-chip
+        class="box"
+        cdkDrag
+        *ngFor="let users of users"
+        (click)="openTasks(users.id)">
+        {{ users.name }}
+    </mat-chip>
+    </mat-chip-list>
+</mat-card>

@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>Postagens</mat-card-title>
+
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let post of posts" (click)="getComments(post.id)" hideToggle>
+          <mat-expansion-panel-header class="cardPanel">
+            <mat-card-title class="cardTitle">{{ post.name }}</mat-card-title>
+            <mat-card-subtitle class="cardSubtitle">{{ post.title }}</mat-card-subtitle>
+          </mat-expansion-panel-header>
+
+          <mat-card-content>
+              <p>{{ post.body }}</p>
+              <mat-divider></mat-divider>
+            <mat-list>
+              <h2 class="mat-h2">Comentários</h2>
+
+                <mat-card *ngFor="let comments of comments" class="example-card">
+                  <mat-card-header>
+                    <mat-card-title>{{ comments.name }}</mat-card-title>
+                    <mat-card-subtitle>{{ comments.email }}</mat-card-subtitle>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>
+                      {{ comments.body }}
+                    </p>
+                  </mat-card-content>
+                </mat-card>
+              
+            </mat-list>
+        </mat-card-content>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+</mat-card>

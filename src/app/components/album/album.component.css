@@ -1,0 +1,45 @@
+.album{
+    background: no-repeat center;
+    background-size: cover;
+}
+.albumContent{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+.mat-typography{
+    margin: auto auto;
+    text-align: center;
+    width: 60%;
+}
+.mat-title {
+    line-height: 15px;
+}
+.mat-typography h3{
+    line-height: 15px;
+}
+.albumHover{
+    background-color: #f5f5f5;
+    transition: 0.5s;
+    opacity: 0;
+    border: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+a{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.album a:hover .albumHover{
+    opacity: 1;
+}
+.mat-dialog-content{
+    width: 60vw;
+}
+.divPhoto{
+    width: 60vw;
+    height: 60vw;
+    background-size: cover;
+}

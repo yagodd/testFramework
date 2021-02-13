@@ -1,0 +1,16 @@
+.cardTitle{
+    font-size: 18px;
+    margin-right: 10px;
+    white-space: nowrap;
+    margin-top: 8px;
+}
+.cardSubtitle{
+    margin-top: 6px!important;
+}
+.cardPanel{
+    height: unset!important;
+}
+.mat-card{
+    max-width: 80vw;
+    margin: 20px auto;
+}
